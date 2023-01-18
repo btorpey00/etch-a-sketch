@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Etch-A-Sketch</h1>
+
+    <div class="container">
+
+        <div class="selections">
+            <form class="numRows">
+                <label class="selectSize">Select Grid Size <br></label>
+                <input type="range" id="numRows" min="10" max="100" value="16">
+            </form>
+            <div id="slideText"></div>
+            <form class="custColor">
+                <input type="color" id="color" name="color">
+                <label for="selectColor">Select custom color</label>
+            </form>
+            <form class="black">
+                <input type="checkbox" id="black" name="black">
+                <label for="black">Black</label>
+                            </form>
+            <form class="rainbow">
+                <input type="checkbox" id="rainbow" name="rainbow">
+                <label for="rainbow">Rainbow</label>
+            </form>
+            <form class="shade">
+                <input type="checkbox" id="shade" name="shade">
+                <label for="shade">Shade</label>
+            </form>
+        </div>
+
+        <div class="game">
+            <div id="gameboard"></div>
+            <button id="clear">Clear</button>
+        </div>
+
+    </div>
+    
+</body>
+</html>
