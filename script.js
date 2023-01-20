@@ -5,11 +5,19 @@ const gameboard = document.getElementById('gameboard');
 const clear = document.getElementById('clear');
 const black = document.getElementById('black');
 const rainbow = document.getElementById('rainbow');
-//const shade = document.getElementById('shade');
 const erase = document.getElementById('erase');
 let custColor = document.getElementById('color');
-
+let penOn = false;
 black.checked = true;
+
+gameboard.addEventListener('click', () => {
+    if (penOn) {
+        penOn = false;
+    }
+    else {
+        penOn = true;
+    }
+});
 
 rainbow.addEventListener('change', () => {
     if (rainbow.checked) {
@@ -64,7 +72,9 @@ function createGrid(x) {
             square.classList.add('square');
             column.appendChild(square);
             square.addEventListener('mouseenter', () => {
-                colorSquare(square);
+                if (penOn){
+                    colorSquare(square);
+                };
             });
             clear.addEventListener('click', () => {
                 clearAll(square);
@@ -109,8 +119,7 @@ function colorSquare(x) {
     }
     else if (black.checked) {
         x.style.backgroundColor = 'black';
-}
-
+    }
 }
 
 function clearAll(x) {
