@@ -5,7 +5,7 @@ const gameboard = document.getElementById('gameboard');
 const clear = document.getElementById('clear');
 const black = document.getElementById('black');
 const rainbow = document.getElementById('rainbow');
-const shade = document.getElementById('shade');
+//const shade = document.getElementById('shade');
 const erase = document.getElementById('erase');
 let custColor = document.getElementById('color');
 
@@ -28,7 +28,7 @@ black.addEventListener('change', () => {
 });
 
 erase.addEventListener('change', () => {
-    if (rainbow.checked) {
+    if (erase.checked) {
         black.checked = false;
         rainbow.checked = false;
         custColor.value = '#000000';
